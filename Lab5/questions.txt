@@ -1,0 +1,97 @@
+Lab 5, Spring 2023
+
+Using an editor, answer the following questions:
+
+NAME: Joseph Laudati
+
+
+
+
+
+
+
+---------
+example.c
+---------
+1) What is the cause of the seg fault in the program called example.c?
+ 
+Joseph: There was an issue with the for loop which was causing a bounds issue. Because the for loop is initialized at 0 and will continue as long as i >= 0, it will result in an infinite loop where the program will keep on iterating beyond the limit of the Array.
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------
+broken.c
+--------
+2) What line in broken.c did the program seg fault on?
+
+Joseph: The seg fault occurred on line: 28
+
+
+
+
+
+
+
+
+3) What was the value of the variable "count" at the time of the seg fault?
+
+
+Joseph: The value of "count" by the time of the segment error is "26"
+
+
+
+
+
+
+
+
+4) What was the value of the variable "i" at the time of the seg fault?
+
+
+Joseph = The value of variable "I" is equal to 0 by line 28 (the breakpoint)
+
+
+
+
+
+
+
+
+5) What was the value of the variable "search" at the time of the seg fault?
+
+
+Joseph: The value of "search" is "1" before the seg fault at line 28
+
+
+
+
+
+
+
+
+6) What are the values in the "table" array?
+
+The values go as follows: {5, 10, 14, 16, 18, 20, 22, 24, 26}
+
+
+
+
+
+
+
+
+7) what do you think the bug is?
+
+
+Joseph: In line 28, the information inside of the while loop was saying "search = 1" instead of "search ==1." This was causing the loop to fail because we aren't trying to set variable "search = 1" it should be "search == 1" because we are trying to repeat something WHILE "search" is equal (==) to 1. There was also a logic error that was preventing the loop from ending correctly. The while loop was set to continue as long as "search" was equal to one. In order to correct this, you need to also add the condition where "i" is less than 'count' to fix the logic error that the computer tells you. 
+
+
+
+
+
