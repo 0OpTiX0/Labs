@@ -24,7 +24,7 @@ int lines = 0;
 int menuChoice;
 int x = 0;
 char txt[MAX_LINE][MAX_LINE_LEN];
-char ntxt [MAX_LINE][MAX_LINE_LEN];
+char ntxt[MAX_LINE][MAX_LINE_LEN];
 
 file = fopen("input.txt","r");
 
@@ -53,7 +53,6 @@ if (menuChoice == 2 ){
 printf("\nThe poem has %i lines.\n\n",lines);
 }
 if (menuChoice == 3 ){
-	
       for (i = 0; i < lines; i++) {
         int j;
         for (j = 0; txt[i][j] != '\0'; j++) {
@@ -73,11 +72,8 @@ if (menuChoice == 3 ){
     }
 }
 if (menuChoice == 4 ){
-
-	break;
-
+    break;
 }
-
 }
 return 0;
 }
