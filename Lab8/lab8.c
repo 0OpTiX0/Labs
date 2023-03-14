@@ -28,7 +28,6 @@ void convertCase(char txt[MAX_LINE][MAX_LINE_LEN], int lines, char ntxt[MAX_LINE
 
 int main(void){
 FILE *file;
-int i;
 int lines = 0;
 int menuChoice;
 
@@ -56,10 +55,11 @@ if (menuChoice == 2 ){
 printf("\nThe poem has %i lines.\n\n",lines);
 }
 if (menuChoice == 3 ){
-    convertCase(ntxt,lines,txt);
-    for (i = 0; i < lines; i++) {
-        printf("%s", ntxt[i]); 
-    }
+    convertCase(txt,lines,ntxt);
+    //convertCase(txt,lines,ntxt);
+    // For joseph's future questions about this function. If you want to change an input using a function, set the original first
+    // then input what is being changed and set the final thing you want the changes to be put in to.
+
 }
 if (menuChoice == 4 ){
     break;
@@ -85,7 +85,6 @@ int printMenu(){
 }
 
 void printArray(char txt[MAX_LINE][MAX_LINE_LEN], int lines){
-
     int i;
     
     
@@ -109,4 +108,8 @@ for (i = 0; i < lines; i++) {
         }
         ntxt[i][j] = '\0'; 
     }
+for (i = 0; i < lines; i++) {
+        printf("%s", ntxt[i]); 
+    }
 }
+   
