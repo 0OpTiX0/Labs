@@ -1,11 +1,20 @@
 #include <stdio.h>
 
-int main(int argc, char *argv []) {
+int main(void){
+    int array_of_integers[10], *ptr_of_array, *ptr_of_first_element;
+    int i;
 
-    int *p1;
-    char *p2;
+    ptr_of_array = array_of_integers;
+    ptr_of_first_element =&array_of_integers[0];
 
-    p2 = p1;
+    for (i = 0; i< 10;  i++)
+        array_of_integers[i] = i;
+    
+    for (i = 0;i < 10; i++)
+        *(ptr_of_array++) = i;
 
-    return 0;
+
+    for (i = 0; i < 10; i++)
+        printf("%d\n", *(ptr_of_first_element +i));
+
 }
